@@ -1,0 +1,65 @@
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MDM Topic</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/babel-standalone@6/babel.js"></script>
+
+    <script type="text/babel">
+
+
+   function Title(){
+     return (
+        <div>
+            <h1> Topics covered</h1>
+            <p>The following is a list of all the topics we cover in the MDN learning area.</p>
+        </div>
+     );
+   }
+
+  function Topic2(props){
+    return(
+        <div>
+            <a href="">{props.anch}</a>
+            <p>{props.pra}</p>
+       </div>
+    );
+  }
+
+
+  // Define a component called Greetings
+  function Greetings() {
+    return (
+        <div id="all" >
+            <Title />
+            <Topic2 anch="Getting started with the web" pra="Provides a practical introduction to web development for complete beginners." />
+            <Topic2 anch="HTML — Structuring the web" pra="HTML is the language that we use to structure the different parts of our content and define what their meaning or purpose is. This topic teaches HTML in detail." />
+            <Topic2 anch="CSS — Styling the web" pra="CSS is the language that we use to control our web content's style and layout, as well as adding behavior like animation. This topic provides comprehensive coverage of CSS." />
+            
+
+
+        </div>
+    );
+  }
+
+
+  // Render the component to the DOM
+  ReactDOM.render(
+    <Greetings />,
+    document.getElementById("root")
+  );
+</script>
+
+  </body>
+
+</html>
+
